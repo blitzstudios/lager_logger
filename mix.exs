@@ -4,7 +4,7 @@ defmodule LagerLogger.Mixfile do
   def project do
     [app: :lager_logger,
      version: "1.0.3",
-     elixir: ">= 1.1.0 and <= 1.4.0",
+     elixir: "~> 1.2",
      package: package,
      description: description,
      deps: deps]
@@ -31,7 +31,7 @@ defmodule LagerLogger.Mixfile do
   defp deps do
     [
       {:ex_doc, ">= 0.0.0", only: :dev},
-      {:lager, ">= 2.1.0"},
+      {:lager, github: "basho/lager", tag: "2.0.3"},
     ]
   end
 end
